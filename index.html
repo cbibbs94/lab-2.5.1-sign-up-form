@@ -12,23 +12,148 @@
     </nav>
     <main>
         <h2>Vacation Contest Sign-Up Form</h2>
-        <form> <!-- TODO: Set Action and Method Properties -->
+        <form method="GET" action="./results.html
+        " > <!-- TODO: Set Action and Method Properties -->
+            
+            
             <div>
+                <span class="required-field">*</span>
                 <label for="firstname">Your First Name</label>
-                <input type="text" id="firstname" name="firstname">
+                <input type="text" id="firstname" name="firstname" minlength="2" maxlength="35">
+                
+
                 <!-- TODO: Create a "lastname" input with type "text" -->
+                <span class="required-field">*</span>
+                <label for="lastname">Your Last Name</label>
+                <input type="text" id="lastname" name="lastname" minlength="2" maxlength="35">
+
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age" min="21" max="110">
+                <h5>**Individuals must be age 21 or older to participate in this competition.**</h5>
+
+                <!--code for password field-->
+                <span class="required-field">*</span>
+                <label for="password">Your Secret Code</label>
+                <input type="password" id="password" name="password" pattern="[0-9A-Za-z]{6}" title="6 Character Alphanumeric passcode" maxlength="6">
+
             </div>
             <!-- TODO: Make fieldset and legend -->
-            <!-- Todo: Email Input -->
-            <!-- Todo: Street Address Input -->
-            <!-- Todo: City, State, and Zip Inputs -->
+            <fieldset>
+                <legend>Your Contact Information</legend> 
+                <span class="required-field">*</span>
 
-            <!-- TODO: Second fieldset -->
-            <!-- TODO: Radio buttons for selecting preferred destination -->
-            <!-- TODO: Color input for selecting favorite color -->
-            <!-- TODO: Checkboxes for selecting extra add-ons -->
-            
-            <!-- TODO: Submit Button -->
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" >
+
+                <label for="address">Street Address</label>
+                <input type="text" id="address" name="address">
+
+                <label for="city">City</label>
+                <input type="text" id="city" name="city">
+
+                <label for="state">State</label>
+                <select name="state" id="state">
+                    <option readonly value="N/A">Please Choose Your State</option>
+                    <option value="Alabama">AL</option>
+                    <option value="Alaska">AK</option>
+                    <option value="Arizona">AZ</option>
+                    <option value="Arkansas">AR</option>
+                    <option value="California">CA</option>
+                    <option value="Colorado">CO</option>
+                    <option value="Connecticut">CT</option>
+                    <option value="Delaware">DE</option>
+                    <option value="Florida">FL</option>
+                    <option value="Georgia">GA</option>
+                    <option value="Hawaii">HI</option>
+                    <option value="Idaho">ID</option>
+                    <option value="Illinois">IL</option>
+                    <option value="Indiana">IN</option>
+                    <option value="Iowa">IA</option>
+                    <option value="Kansas">KS</option>
+                    <option value="Kentucky">KY</option>
+                    <option value="Louisiana">LA</option>
+                    <option value="Maine">ME</option>
+                    <option value="Maryland">MD</option>
+                    <option value="Massachusetts">MA</option>
+                    <option value="Michigan">MI</option>
+                    <option value="Minnesota">MN</option>
+                    <option value="Mississippi">MS</option>
+                    <option value="Missouri">MO</option>
+                    <option value="Montana">MT</option>
+                    <option value="Nebraska">NE</option>
+                    <option value="Nevada">NV</option>
+                    <option value="New Hampshire">NH</option>
+                    <option value="New Jersey">NJ</option>
+                    <option value="New Mexico">NM</option>
+                    <option value="New York">NY</option>
+                    <option value="North Carolina">NC</option>
+                    <option value="North Dakota">ND</option>
+                    <option value="Ohio">OH</option>
+                    <option value="Oklahoma">OK</option>
+                    <option value="Oregon">OR</option>
+                    <option value="Pennsylvania">PA</option>
+                    <option value="Rhode Island">RI</option>
+                    <option value="South Carolina">SC</option>
+                    <option value="Tennessee">TN</option>
+                    <option value="Texas">TX</option>
+                    <option value="Utah">UT</option>
+                    <option value="Vermont">VT</option>
+                    <option value="Virginia">VA</option>
+                    <option value="Washington">WA</option>
+                    <option value="West Virginia">WV</option>
+                    <option value="Wisconsin">WI</option>
+                    <option value="Wyoming">WY</option>
+                </select>
+
+                <label for="zip">Zip</label>
+                <input type="text" id="zip" name="zip" pattern="[0-9]{5}" title="Five digit Zip Code">
+
+            </fieldset>
+            <fieldset>
+                <legend>Some Preferences</legend>
+                <strong>Destination</strong>
+                
+                <div>
+                    <label for="location">Japan</label>
+                    <input type="radio" value="Japan" name="location">
+                </div>
+                <div>
+                    <label>New Zealand</label>
+                    <input type="radio" value="New Zealand" name="location">
+                </div>
+                <div>
+                    <label>Reykjavik</label>
+                    <input type="radio" value="Reykjavik" name="locationS">
+                </div>
+                <hr>
+
+                <strong>Favorite Color</strong>
+                <label for="color">Favorite Color</label>
+                <select name="color" id="color">
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                    <option value="purple">Purple</option>
+                    <option value="orange">Orange</option>
+                    <option value="beige">Beige</option>
+                    <option value="rainbow">Rainbow</option>
+                </select>
+                <hr>
+                <strong>Add-ons for your Vacation</strong>
+                <div>
+                    Beach Towel:
+                    <input type="checkbox" value="Beach Towel" name="Extras">
+                </div>
+                <div>
+                    Regional Hat:
+                    <input type="checkbox" value="Regional Hat" name="Extras">
+                </div>
+                <div>
+                    Guided Museum Tour:
+                    <input type="checkbox" value="Guided Museum Tour" name="Extras">
+                </div>
+            </fieldset>
+            <input type="submit" value="LET'S TRAVEL!!">
         </form>
     </main>
     <footer>
